@@ -19,7 +19,7 @@ if advance_config:
   from_chats = []
   chats_data = {}
   for chats in advance_config:
-    chat = chats.strip().split()
+    chat = chats.strip()
     chats_data[int(chat[0])] = int(chat[1])
     if not int(chat[0]) in from_chats:
       from_chats.append(int(chat[0]))
