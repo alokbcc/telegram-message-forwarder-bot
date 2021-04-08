@@ -27,7 +27,7 @@ if advance_config:
   print(chats_data)
     
 
-@app.on_message(filters.chat(from_chats) & filters.incoming)
+@app.on_message(filters.chat(from_chats) & filters.video)
 def work(client, message):
     if advance_config:
       try:
