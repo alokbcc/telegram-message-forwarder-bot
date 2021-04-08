@@ -7,7 +7,7 @@ api_id = "2634132"   # Get it from my.telegram.org
 api_hash = "677e079dcc7e6a14dbeecfd2bf7bae11"   # Get it from my.telegram.org
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
-bot_token = environ["BOT_TOKEN"]
+#bot_token = environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
 from_chats = list(set(int(x) for x in environ.get("FROM_CHATS").split()))
 to_chats = list(set(int(x) for x in environ.get("TO_CHATS").split()))
@@ -15,8 +15,8 @@ advance_config = environ.get("ADVANCE_CONFIG", None)
 
 if tg_session:
     app = Client(tg_session, api_id, api_hash)
-else:
-    app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
+#else:
+ #   app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
 if advance_config:
     
