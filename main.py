@@ -3,16 +3,16 @@ from pyrogram import Client, filters
 
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
-bot_token = environ["BOT_TOKEN"]
+#bot_token = environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
 from_chats = list(set(int(x) for x in environ.get("FROM_CHATS").split()))
 to_chats = list(set(int(x) for x in environ.get("TO_CHATS").split()))
 advance_config = environ.get("ADVANCE_CONFIG", None)
 
-if tg_session:
-  app = Client(tg_session, api_id, api_hash)
-else:
-  app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
+
+app = Client(tg_session, api_id, api_hash)
+
+#  app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
 if advance_config:
   print("Advance Configures detected...")
