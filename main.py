@@ -16,9 +16,6 @@ else:
 
 if advance_config:
   print("Advance Configures detected...")
-  print(advance_config)
-  op = advance_config.split(",")
-  print(op)
   from_chats = []
   chats_data = {}
   for chats in advance_config:
