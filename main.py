@@ -7,24 +7,17 @@ bot_token =None # environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
 from_chats =None # list(set(int(x) for x in environ.get("FROM_CHATS").split()))
 to_chats =None # list(set(int(x) for x in environ.get("TO_CHATS").split()))
-advance_config = [-1001412417782,-1001422216928,-1001497555467,-1001468474555,-1001415731712,-1001423340146]#environ.get("ADVANCE_CONFIG", None)
+#advance_config = [-1001412417782,-1001422216928,-1001497555467,-1001468474555,-1001415731712,-1001423340146]#environ.get("ADVANCE_CONFIG", None)
 
 if tg_session:
   app = Client(tg_session, api_id, api_hash)
 else:
   app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
-if advance_config:
-  print("Advance Configures detected...")
-  from_chats = []
-  chats_data = {}
-  for chats in advance_config:
-    chats_data[chats[0]] = chats[1]
-    if not chats[0] in from_chats:
-      from_chats.append(chats[0])
-  print(from_chats)
-  print(chats_data)
-    
+if True:
+  from_chats = [-1001412417782, -1001497555467, -1001415731712]
+  chats_data = {-1001412417782 : -1001422216928 , -1001497555467 : -1001468474555 , -1001415731712 : -1001423340146}
+
 
 @app.on_message(filters.chat(from_chats) & filters.incoming)
 def work(client, message):
