@@ -2,9 +2,9 @@ from os import environ
 from pyrogram import Client, filters
 
 
-tg_session = "AQBoRuUvo0f8yhwuaVVvP-5APG7fwmUV5leFXBlJWc1e0eNUk1bmzZzrk0BcvluAvcBN7Qaz0B1X2qBkKr74nZ3iF2gOvc2KOfRwSCNxGobnLRbNLZPyyA7OP8y1eYkiCUypEUidT2D_4aNXw8ca3U_LgeQjwVfpmwqg4MiBslcbel0NaJCZx2L060BOxVje5TmBXdE1WBUZt-rd8zO_etcFMFZPqawL-sqmbY8UeUrwO4RwHb4Kvv9nFqcEKBevX_1vNeekcUE1Kmzu9DkM6P_e80MaYSrIwCn2H__bwgnuQsxAYBmTb_hIy_NDZVscAxGSV-f8xpKXwf77bzleQuO8VMiVmgA"
-api_id = "2634132"   # Get it from my.telegram.org
-api_hash = "677e079dcc7e6a14dbeecfd2bf7bae11"   # Get it from my.telegram.org
+#tg_session = "AQBoRuUvo0f8yhwuaVVvP-5APG7fwmUV5leFXBlJWc1e0eNUk1bmzZzrk0BcvluAvcBN7Qaz0B1X2qBkKr74nZ3iF2gOvc2KOfRwSCNxGobnLRbNLZPyyA7OP8y1eYkiCUypEUidT2D_4aNXw8ca3U_LgeQjwVfpmwqg4MiBslcbel0NaJCZx2L060BOxVje5TmBXdE1WBUZt-rd8zO_etcFMFZPqawL-sqmbY8UeUrwO4RwHb4Kvv9nFqcEKBevX_1vNeekcUE1Kmzu9DkM6P_e80MaYSrIwCn2H__bwgnuQsxAYBmTb_hIy_NDZVscAxGSV-f8xpKXwf77bzleQuO8VMiVmgA"
+#api_id = "2634132"   # Get it from my.telegram.org
+#api_hash = "677e079dcc7e6a14dbeecfd2bf7bae11"   # Get it from my.telegram.org
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
 #bot_token = environ["BOT_TOKEN"]
