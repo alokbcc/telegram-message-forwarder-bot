@@ -5,8 +5,8 @@ api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
 #bot_token = environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
-from_chats = list(set(int(x) for x in environ.get("FROM_CHATS").split()))
-to_chats = list(set(int(x) for x in environ.get("TO_CHATS").split()))
+from_chats = list(set(str(x) for x in environ.get("FROM_CHATS").split()))
+to_chats = list(set(str(x) for x in environ.get("TO_CHATS").split()))
 advance_config = environ.get("ADVANCE_CONFIG", None)
 
 
