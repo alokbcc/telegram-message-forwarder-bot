@@ -15,8 +15,8 @@ else:
   app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
 if True:
-  from_chats = [-1001412417782, -1001497555467, -1001415731712]
-  chats_data = {-1001412417782 : -1001422216928 , -1001497555467 : -1001468474555 , -1001415731712 : -1001423340146}
+  from_chats = [-1001412417782]
+  chats_data = {-1001412417782 : -1001422216928}
 
 
 @app.on_message(filters.chat(from_chats) & filters.incoming)
