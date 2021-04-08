@@ -7,7 +7,7 @@ api_id = "2634132"   # Get it from my.telegram.org
 api_hash = "677e079dcc7e6a14dbeecfd2bf7bae11"   # Get it from my.telegram.org
 from_chats = ["@SD_TV_SHOWS" ,"@HD_TV_SHOWS" , "@MiNX_TV"]
 to_chats = ["@TVSHOWSD","@TVSHOWHD1","@MiNX_TV"]
-io = "if os.environ.get("ENV"):
+io = '''if os.environ.get("ENV"):
     # Add a ENV in Environment Variables if you wanna configure the bot via env vars.
      
     api_id = int(environ["API_ID"])
@@ -16,7 +16,7 @@ io = "if os.environ.get("ENV"):
     tg_session = environ.get("TELEGRAM_SESSION", None)
     from_chats = list(set(int(x) for x in environ.get("FROM_CHATS").split()))
     to_chats = list(set(int(x) for x in environ.get("TO_CHATS").split()))
-    advance_config = environ.get("ADVANCE_CONFIG", None)
+    advance_config = environ.get("ADVANCE_CONFIG", None)'''
 
 if tg_session:
   app = Client(tg_session, api_id, api_hash)
