@@ -19,9 +19,9 @@ if advance_config:
   from_chats = []
   chats_data = {}
   for chats in advance_config:
-    chats_data[int(chats[0])] = int(chats[1])
-    if not int(chats[0]) in from_chats:
-      from_chats.append(int(chats[0]))
+    chats_data[chats[0]] = chats[1]
+    if not chats[0] in from_chats:
+      from_chats.append(chats[0])
   print(from_chats)
   print(chats_data)
     
@@ -30,7 +30,7 @@ if advance_config:
 def work(client, message):
     if advance_config:
       try:
-        message.copy(chats_data[int(message.chat.id)])
+        message.copy(chats_data[message.chat.id])
       except Exception as e:
         print(e)
     else:
