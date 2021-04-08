@@ -21,7 +21,7 @@ if True:
 
 @app.on_message(filters.chat(from_chats) & filters.incoming)
 def work(client, message):
-    if advance_config:
+    if True:
       try:
         message.copy(chats_data[message.chat.id])
       except Exception as e:
