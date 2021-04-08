@@ -7,7 +7,7 @@ bot_token =None # environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
 from_chats =None # list(set(int(x) for x in environ.get("FROM_CHATS").split()))
 to_chats =None # list(set(int(x) for x in environ.get("TO_CHATS").split()))
-advance_config = environ.get("ADVANCE_CONFIG", None)
+advance_config = [-1001412417782,-1001422216928,-1001497555467,-1001468474555,-1001415731712,-1001423340146]#environ.get("ADVANCE_CONFIG", None)
 
 if tg_session:
   app = Client(tg_session, api_id, api_hash)
@@ -21,7 +21,7 @@ if advance_config:
   print(op)
   from_chats = []
   chats_data = {}
-  for chats in advance_config.split(","):
+  for chats in advance_config:
     chat = chats.strip().split()
     chats_data[int(chat[0])] = int(chat[1])
     if not int(chat[0]) in from_chats:
