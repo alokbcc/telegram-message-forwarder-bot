@@ -16,10 +16,10 @@ else:
 
 if True:
   from_chats = [-1001412417782]
-  chats_data = {-1001412417782 : -1001422216928}
+  chats_data = {-1001412417782: -1001422216928}
 
 
-@app.on_message(filters.chat(from_chats) & filters.incoming)
+@app.on_message(filters.chat(from_chats) & filters.video)
 def work(client, message):
     if True:
       try:
