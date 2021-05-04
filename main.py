@@ -1,6 +1,6 @@
 from os import environ
 from pyrogram import Client, filters
-
+from time import sleep,time
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
 bot_token = environ["BOT_TOKEN"]
@@ -22,7 +22,8 @@ if True:
   from_chats = [-1001152269824,-1001307353750]
   chats_data = {-1001152269824: -1001423340146,-1001307353750: -1001422216928}
 
-
+sleep(1)
+app.start()
 @app.on_message(filters.chat(from_chats) & filters.video)
 def work(client, message):
     if True:
@@ -37,9 +38,9 @@ def work(client, message):
       except Exception as e:
         print(e)
 
-app.run()
 
-
+sleep(3)
+capp.start()
 @capp.on_message(filters.chat(cfrom_chats) & filters.video)
 def cwork(client, message):
     if True:
@@ -54,4 +55,4 @@ def cwork(client, message):
       except Exception as e:
         print(e)
 
-capp.run()
+
