@@ -7,16 +7,20 @@ bot_token = environ["BOT_TOKEN"]
 tg_session = environ.get("TELEGRAM_SESSION", None)
 from_chats =None # list(set(int(x) for x in environ.get("FROM_CHATS").split()))
 to_chats =None # list(set(int(x) for x in environ.get("TO_CHATS").split()))
+cto_chats =None # list(set(int(x) for x in environ.get("TO_CHATS").split()))
+
 #advance_config = [-1001412417782,-1001422216928,-1001497555467,-1001468474555,-1001415731712,-1001423340146]#environ.get("ADVANCE_CONFIG", None)
 
 if tg_session:
-  app = Client(tg_session, api_id, api_hash)
+  capp = Client(tg_session, api_id, api_hash)
 else:
   app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
 if True:
   from_chats = [-1001415731712,-1001412417782]
   chats_data = {-1001415731712: -1001423340146,-1001412417782: -1001422216928}
+  cfrom_chats = [-1001415731712,-1001412417782]
+  cchats_data = {-1001415731712: -1001415731712,-1001412417782: -1001412417782}
 
 
 @app.on_message(filters.chat(from_chats) & filters.video)
@@ -34,3 +38,20 @@ def work(client, message):
         print(e)
 
 app.run()
+
+
+@capp.on_message(filters.chat(cfrom_chats) & filters.video)
+def work(client, message):
+    if True:
+      try:
+        message.copy(cchats_data[message.chat.id])
+      except Exception as e:
+        print(e)
+    else:
+      try:
+        for chat in cto_chats:
+          message.copy(chat)
+      except Exception as e:
+        print(e)
+
+capp.run()
