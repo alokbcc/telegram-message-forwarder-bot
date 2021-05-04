@@ -23,6 +23,24 @@ if True:
   chats_data = {-1001152269824: -1001423340146,-1001307353750: -1001422216928}
 
 sleep(1)
+capp.start()
+@capp.on_message(filters.chat(cfrom_chats) & filters.video)
+def cwork(client, message):
+    if True:
+      try:
+        message.copy(cchats_data[message.chat.id])
+      except Exception as e:
+        print(e)
+    else:
+      try:
+        for chat in cto_chats:
+          message.copy(chat)
+      except Exception as e:
+        print(e)
+
+
+
+sleep(3)
 app.start()
 @app.on_message(filters.chat(from_chats) & filters.video)
 def work(client, message):
@@ -39,20 +57,5 @@ def work(client, message):
         print(e)
 
 
-sleep(3)
-capp.start()
-@capp.on_message(filters.chat(cfrom_chats) & filters.video)
-def cwork(client, message):
-    if True:
-      try:
-        message.copy(cchats_data[message.chat.id])
-      except Exception as e:
-        print(e)
-    else:
-      try:
-        for chat in cto_chats:
-          message.copy(chat)
-      except Exception as e:
-        print(e)
 
 
