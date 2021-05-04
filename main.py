@@ -22,8 +22,8 @@ if True:
   from_chats = [-1001152269824,-1001307353750]
   chats_data = {-1001152269824: -1001423340146,-1001307353750: -1001422216928}
 
-sleep(1)
-capp.start()
+
+
 @capp.on_message(filters.chat(cfrom_chats) & filters.video)
 def cwork(client, message):
     if True:
@@ -40,8 +40,8 @@ def cwork(client, message):
 
 
 
-sleep(3)
-app.start()
+
+
 @app.on_message(filters.chat(from_chats) & filters.video)
 def work(client, message):
     if True:
@@ -56,6 +56,9 @@ def work(client, message):
       except Exception as e:
         print(e)
 
-
-
+sleep(1)
+capp.run()
+sleep(1)
+app.run()
+sleep(1)
 
