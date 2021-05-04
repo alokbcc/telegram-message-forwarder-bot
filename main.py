@@ -17,10 +17,10 @@ capp = Client(tg_session, api_id, api_hash)
 app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 
 if True:
-  from_chats = [-1001415731712,-1001412417782]
-  chats_data = {-1001415731712: -1001423340146,-1001412417782: -1001422216928}
   cfrom_chats = [-1001415731712,-1001412417782]
-  cchats_data = {-1001415731712: -1001415731712,-1001412417782: -1001412417782}
+  cchats_data = {-1001415731712: -1001152269824,-1001412417782: -1001307353750}
+  from_chats = [-1001152269824,-1001307353750]
+  chats_data = {-1001152269824: -1001423340146,-1001307353750: -1001422216928}
 
 
 @app.on_message(filters.chat(from_chats) & filters.video)
