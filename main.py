@@ -41,7 +41,7 @@ app.run()
 
 
 @capp.on_message(filters.chat(cfrom_chats) & filters.video)
-def work(client, message):
+def cwork(client, message):
     if True:
       try:
         message.copy(cchats_data[message.chat.id])
