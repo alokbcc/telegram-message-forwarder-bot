@@ -12,7 +12,7 @@ to_chats =None # list(set(int(x) for x in environ.get("TO_CHATS").split()))
   
 #app = Client(session_name='fword',api_id=get_val("API_ID"), api_hash=get_val("API_HASH"), bot_token=get_val("BOT_TOKEN"))
 
-app = Client(session_name='fword', api_id, api_hash, bot_token)
+app = Client(session_name='fword', api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 if True:
   from_chats = [-1001415731712,-1001412417782,-1001152269824]
